@@ -10,44 +10,39 @@
 
 (function (isPrimeFunction) {
 
-this.init = function () {
-    this.checkNumber();
-}; 
+    this.init = function () {
+        this.checkNumber();
+    }; 
 
-var number, num;
+    this.checkNumber = function (num) {
+        do{
+            num = prompt('input whole humber');
+            num = parseInt(num);
+            isPrime(num);
+        }while (!Number.isInteger(num));
+        //
+    };
 
-this.checkNumber = function (num) {
-    do{
-        num = prompt('input whole humber');
-        num = parseInt(num);
-        isPrime(num);
-    }while (!Number.isInteger(num));
-    //
-};
+    this.isPrime = function(number) {
+        
+            var i = 2;
 
-this.isPrime = function(number) {
-    
-        var i = 2;
-
-        while ((i * i <= number) && (number % i != 0)) {
-            i+=1;
-            var a = i * i > number; 
-        };
-        if (a) {
-            console.log(number + ' is a prime number.');
-        } else {
-            console.log(number + ' is not a prime number.');
-            if (number % i == 0) {
-                console.log('It can be divide by ' + i);
+            while ((i * i <= number) && (number % i != 0)) {
+                i+=1;
+                var a = i * i > number; 
             };
-            
-        };
-    
-    
-};
+            if (a) {
+                console.log(number + ' is a prime number.');
+            } else {
+                console.log(number + ' is not a prime number.');
+                if (number % i == 0) {
+                    console.log('It can be divide by ' + i);
+                };
+                
+            };
+    };
 
-this.init();
-
+    this.init();
 
 })();
 
