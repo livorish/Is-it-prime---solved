@@ -8,7 +8,7 @@
 
 //4. Otherwise print the number is not prime and print its smallest positive divisor other than 1.
 
-(function (isPrimeFunction) {
+(function isPrimeFunction() {
 
     this.init = function () {
         this.checkNumber();
