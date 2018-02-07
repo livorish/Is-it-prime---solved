@@ -35,10 +35,7 @@
                 console.log(number + ' is a prime number.');
             } else {
                 console.log(number + ' is not a prime number.');
-                if (number % i == 0) {
-                    console.log('It can be divide by ' + i);
-                };
-                
+                console.log('It can be divide by ' + i);            
             };
     };
 
